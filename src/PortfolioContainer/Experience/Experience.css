@@ -1,0 +1,112 @@
+.experience__maincontainer {
+  width: var(--container-width-lg);
+  margin-top: 4rem !important;
+  margin: 0 auto;
+}
+
+.experience__maincontainer h5 {
+  font-size: 14px;
+  text-align: center;
+}
+
+.experience__maincontainer h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.experience__container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.experience__container > div {
+  background-color: var(--color-bg);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  transition: var(--transition);
+}
+
+.experience__container > div:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.experience__container > div h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 18px;
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.experience__details {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.experience__icon {
+  margin-top: 4px;
+  color: var(--color-primary);
+}
+.experience__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+h4 {
+  display: flex;
+  justify-content: left;
+  font-size: 1rem;
+}
+.bottom-text {
+  display: flex;
+  justify-content: left;
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 1024px) {
+  .experience__maincontainer {
+    width: var(--container-width-md);
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  .bottom-text {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience__maincontainer {
+    width: var(--container-width-sm);
+    margin-bottom: 2rem;
+  }
+  .experience__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .experience__container > div {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .experience__maincontainer h2 {
+    margin-bottom: 2rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+  }
+  .bottom-text {
+    font-size: 0.5rem;
+  }
+}

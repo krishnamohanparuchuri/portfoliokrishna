@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Profile from './PortfolioContainer/Home/Profile';
+import NavBar from './PortfolioContainer/NavBar/NavBar';
+import Experience from './PortfolioContainer/Experience/Experience';
+import Services from './PortfolioContainer/Services/Services';
+import ContactMe from './PortfolioContainer/ContactMe/ContactMe';
+import Footer from './PortfolioContainer/Footer/Footer';
+import AboutMe from './PortfolioContainer/AboutMe/AboutMe';
+import Portfolio from './PortfolioContainer/Portfolio/Portfolio';
 
-function App() {
+function App()
+{
+  AOS.init({
+    duration: 1200,
+    disable: 'mobile'
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile />
+      <NavBar />
+      <AboutMe />
+      <Experience />
+      <Services />
+      <Portfolio />
+      <ContactMe />
+      <Footer />
     </div>
   );
 }
+
 
 export default App;
